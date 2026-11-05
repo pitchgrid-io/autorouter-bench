@@ -1,0 +1,22 @@
+board	layers	nets	drc_err	unconnected	gates	seconds	verdict	top_errors
+pg-n6	6	-	-	-	missing	-	NO-BOARD	
+pg-mossy-quarter-a	2	-	-	-	missing	-	NO-BOARD	
+cm4-lvds-adapter	6	142	4	0	n/a	2	no	copper_edge_clearance=4
+ecp5-dc-scm	8	785	12	0	n/a	9	no	courtyards_overlap=5,zones_intersect=4,copper_edge_clearance=3
+emberone	6	365	1	0	n/a	2	no	copper_sliver=1
+stm32h7-hdmi-sodimm	6	222	0	0	n/a	2	MANUFACTURABLE	
+tiliqua-motherboard	6	230	14	0	n/a	2	no	courtyards_overlap=14
+hackrf-pro	6	490	138	0	n/a	8	no	hole_clearance=111,copper_edge_clearance=18,hole_to_hole=9
+kintex-pcie	8	546	0	0	n/a	3	MANUFACTURABLE	
+xerxes	6	209	164	0	n/a	2	no	hole_clearance=151,copper_edge_clearance=13
+jetson-nano-baseboard	8	488	68	1	n/a	4	no	hole_clearance=36,footprint_type_mismatch=9,copper_edge_clearance=8,courtyards_overlap=7
+jetson-orin-baseboard	8	799	205	0	n/a	8	no	drill_out_of_range=199,hole_clearance=4,zones_intersect=1,courtyards_overlap=1
+kria-k26-devboard	8	804	210	0	n/a	6	no	drill_out_of_range=199,hole_clearance=8,copper_edge_clearance=2,zones_intersect=1
+lpddr4-test-board	8	670	28	0	n/a	5	no	courtyards_overlap=24,copper_edge_clearance=3,zones_intersect=1
+lpddr4-testbed	6	261	204	0	n/a	1	no	copper_edge_clearance=199,zones_intersect=5
+lpddr5-testbed	6	228	204	0	n/a	2	no	copper_edge_clearance=199,zones_intersect=4,courtyards_overlap=1
+artix-dc-scm	8	701	1	0	n/a	6	no	copper_edge_clearance=1
+com-express-7-baseboard	8	1000	219	0	n/a	24	no	drill_out_of_range=199,hole_clearance=16,copper_edge_clearance=4
+snapdragon-845-baseboard	6	667	26	0	n/a	5	no	copper_edge_clearance=14,footprint_type_mismatch=10,courtyards_overlap=2
+ddr5-testbed	6	224	199	0	n/a	1	no	copper_edge_clearance=199
+cm4-baseboard	6	506	220	0	n/a	11	no	drill_out_of_range=199,copper_edge_clearance=12,hole_clearance=8,clearance=1
