@@ -1,3 +1,4 @@
 board	layers	nets	drc_err	unconnected	gates	seconds	verdict	top_errors
 pg-n6	6	270	21	132	missing	14	no	hole_to_hole=15,items_not_allowed=5,copper_sliver=1
 pg-mossy-quarter-a	2	-	-	-	missing	-	NO-PROJECT	
+pg-mossy-quarter-a	2	51	0	0	missing	4	no	
