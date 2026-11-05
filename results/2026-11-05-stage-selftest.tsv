@@ -1,0 +1,4 @@
+date	stage	board	window	cert	drc_err	ref_err	unconnected	ref_unc	new	jlc	seconds	verdict
+2026-11-05 12:37	selftest-identity	cm4-lvds-adapter	board	-	4	4	0	0	none	no	5	PASS
+2026-11-05 12:37	selftest-cut	cm4-lvds-adapter	board	-	4	4	11	0	unconnected+11	no	1	FAIL
+2026-11-05 12:37	selftest-cut-win	cm4-lvds-adapter	0,0,1,1	-	0	0	0	0	none	no	1	PASS

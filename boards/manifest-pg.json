@@ -1,5 +1,5 @@
 {
- "note": "PitchGrid benchmark set (pg-hw #913): zap25's 6-8 layer boards, Antmicro 6-8 layer boards pinned to their default-branch HEAD on 2026-11-05, and the pg-hw boards from a local build (PG_HW_BUILD). CK1 has no board of its own: its mainboard is the N6 board. Judged by pg/manufacturable.py.",
+ "note": "PitchGrid benchmark set (pg-hw #913): zap25's 6-8 layer boards, Antmicro 6-8 layer boards pinned to their default-branch HEAD on 2026-11-05, and the pg-hw boards from a local build (PG_HW_BUILD). CK1 has no board of its own: its mainboard is the N6 board. Judged by pg/manufacturable.py. Proof tier per board (Richard's T0-T3, pg-hw plan section 2 item 7): every board here is T0 = benchmark only.",
  "boards": [
   {
    "name": "pg-n6",
@@ -13,7 +13,9 @@
     "pcb": "n6/route/n6.kicad_pcb",
     "pro": "n6/route/n6.kicad_pro",
     "dru": "n6/route/n6.kicad_dru"
-   }
+   },
+   "tier": "T0",
+   "tier_note": "unbuilt; becomes T1 for us once built and tested"
   },
   {
    "name": "pg-mossy-quarter-a",
@@ -26,7 +28,9 @@
     "gen": "boards/mossy-quarter/gen/run.sh config/mossy1.yaml <build>",
     "pcb": "mossy-quarter/A/mossy-quarter-A.kicad_pcb",
     "pro": "mossy-quarter/A/mossy-quarter-A.kicad_pro"
-   }
+   },
+   "tier": "T0",
+   "tier_note": "unbuilt; becomes T1 for us once built and tested"
   },
   {
    "name": "cm4-lvds-adapter",
@@ -44,7 +48,9 @@
      "url": "https://raw.githubusercontent.com/antmicro/cm4-baseboard-lvds-adapter/4af945ed558e58e4b8aea6fe909fc33d78b63f6f/cm4-lvds-adapter.kicad_pro"
     }
    },
-   "origin": "zap25"
+   "origin": "zap25",
+   "tier": "T0",
+   "tier_note": "benchmark-only routing test case; no proof checked, never a source of copper, blocks or priors"
   },
   {
    "name": "ecp5-dc-scm",
@@ -62,7 +68,9 @@
      "url": "https://raw.githubusercontent.com/antmicro/ecp5-dc-scm/0019313fd2e214f618788e5e61636a4a023ee361/ecp5-dc-scm.kicad_pro"
     }
    },
-   "origin": "zap25"
+   "origin": "zap25",
+   "tier": "T0",
+   "tier_note": "benchmark-only routing test case; no proof checked, never a source of copper, blocks or priors"
   },
   {
    "name": "emberone",
@@ -80,7 +88,9 @@
      "url": "https://raw.githubusercontent.com/256foundation/emberone00-pcb/b21b32ca49710b99cb75f86406b0df5190c9beb4/emberone.kicad_pro"
     }
    },
-   "origin": "zap25"
+   "origin": "zap25",
+   "tier": "T0",
+   "tier_note": "benchmark-only routing test case; no proof checked, never a source of copper, blocks or priors"
   },
   {
    "name": "stm32h7-hdmi-sodimm",
@@ -101,7 +111,9 @@
      "url": "https://raw.githubusercontent.com/antmicro/stm32h7-hdmi-board-sodimm/27e3ac9968983f236155c288ded30beb1a2d24a1/stm32h7-hdmi-board-sodimm-module.kicad_dru"
     }
    },
-   "origin": "zap25"
+   "origin": "zap25",
+   "tier": "T0",
+   "tier_note": "benchmark-only routing test case; no proof checked, never a source of copper, blocks or priors"
   },
   {
    "name": "tiliqua-motherboard",
@@ -119,7 +131,9 @@
      "url": "https://raw.githubusercontent.com/apfaudio/tiliqua-hardware/4ee5878ae821a6b7096f6aed6795dc1349475cb5/hardware/tiliqua-motherboard/tiliqua-motherboard.kicad_pro"
     }
    },
-   "origin": "zap25"
+   "origin": "zap25",
+   "tier": "T0",
+   "tier_note": "benchmark-only routing test case; no proof checked, never a source of copper, blocks or priors"
   },
   {
    "name": "hackrf-pro",
@@ -137,7 +151,9 @@
      "url": "https://raw.githubusercontent.com/greatscottgadgets/hackrf-pro/359b98f2451395408bc25dae64efa9fc518e93d0/praline.kicad_pro"
     }
    },
-   "origin": "zap25"
+   "origin": "zap25",
+   "tier": "T0",
+   "tier_note": "benchmark-only routing test case; no proof checked, never a source of copper, blocks or priors"
   },
   {
    "name": "kintex-pcie",
@@ -155,7 +171,9 @@
      "url": "https://raw.githubusercontent.com/piotr-binkowski/kintex-pcie-board/056792c009a8920d4ef11e76ba3284ee58376078/kintex-pcie.kicad_pro"
     }
    },
-   "origin": "zap25"
+   "origin": "zap25",
+   "tier": "T0",
+   "tier_note": "benchmark-only routing test case; no proof checked, never a source of copper, blocks or priors"
   },
   {
    "name": "xerxes",
@@ -173,7 +191,9 @@
      "url": "https://raw.githubusercontent.com/rapidanalysis/xerxes/43abf5730d092358bc6d10e9faa7233818b5412e/Xerxes/Xerxes.kicad_pro"
     }
    },
-   "origin": "zap25"
+   "origin": "zap25",
+   "tier": "T0",
+   "tier_note": "benchmark-only routing test case; no proof checked, never a source of copper, blocks or priors"
   },
   {
    "name": "jetson-nano-baseboard",
@@ -190,7 +210,9 @@
      "url": "https://raw.githubusercontent.com/antmicro/jetson-nano-baseboard/d8d0b2d71ab4cc4bcdb204a09f78be40d4c8cda3/jetson-nano-baseboard.kicad_pro"
     }
    },
-   "origin": "antmicro"
+   "origin": "antmicro",
+   "tier": "T0",
+   "tier_note": "benchmark-only routing test case; no proof checked, never a source of copper, blocks or priors"
   },
   {
    "name": "jetson-orin-baseboard",
@@ -210,7 +232,9 @@
      "url": "https://raw.githubusercontent.com/antmicro/jetson-orin-baseboard/34f0e7f5fbca441191e20ed55d93cf8614e12bed/jetson-orin-baseboard.kicad_dru"
     }
    },
-   "origin": "antmicro"
+   "origin": "antmicro",
+   "tier": "T0",
+   "tier_note": "benchmark-only routing test case; no proof checked, never a source of copper, blocks or priors"
   },
   {
    "name": "kria-k26-devboard",
@@ -227,7 +251,9 @@
      "url": "https://raw.githubusercontent.com/antmicro/kria-k26-devboard/9ead4dfc5b29fa9308206ccdfe013dd8f6d93b67/kria-k26-devboard.kicad_pro"
     }
    },
-   "origin": "antmicro"
+   "origin": "antmicro",
+   "tier": "T0",
+   "tier_note": "benchmark-only routing test case; no proof checked, never a source of copper, blocks or priors"
   },
   {
    "name": "lpddr4-test-board",
@@ -244,7 +270,9 @@
      "url": "https://raw.githubusercontent.com/antmicro/lpddr4-test-board/5c8b5d3c27d6f3e802dc2d9022a1b1e87b725e5b/lpddr4-test-board.kicad_pro"
     }
    },
-   "origin": "antmicro"
+   "origin": "antmicro",
+   "tier": "T0",
+   "tier_note": "benchmark-only routing test case; no proof checked, never a source of copper, blocks or priors"
   },
   {
    "name": "lpddr4-testbed",
@@ -261,7 +289,9 @@
      "url": "https://raw.githubusercontent.com/antmicro/lpddr4-testbed/93e67cfc3f267443d9b637073688457e8f5c1f91/lpddr4-testbed.kicad_pro"
     }
    },
-   "origin": "antmicro"
+   "origin": "antmicro",
+   "tier": "T0",
+   "tier_note": "benchmark-only routing test case; no proof checked, never a source of copper, blocks or priors"
   },
   {
    "name": "lpddr5-testbed",
@@ -278,7 +308,9 @@
      "url": "https://raw.githubusercontent.com/antmicro/lpddr5-testbed/cea331b8c5e3f1c47fce71aa02077f7295c96107/lpddr5-testbed.kicad_pro"
     }
    },
-   "origin": "antmicro"
+   "origin": "antmicro",
+   "tier": "T0",
+   "tier_note": "benchmark-only routing test case; no proof checked, never a source of copper, blocks or priors"
   },
   {
    "name": "artix-dc-scm",
@@ -295,7 +327,9 @@
      "url": "https://raw.githubusercontent.com/antmicro/artix-dc-scm/b9856f78179fce0739a4955dd4ed5f912619efe6/artix-dc-scm.kicad_pro"
     }
    },
-   "origin": "antmicro"
+   "origin": "antmicro",
+   "tier": "T0",
+   "tier_note": "benchmark-only routing test case; no proof checked, never a source of copper, blocks or priors"
   },
   {
    "name": "com-express-7-baseboard",
@@ -315,7 +349,9 @@
      "url": "https://raw.githubusercontent.com/antmicro/com-express-7-baseboard/4811fd8491dbe0cbbb738e127d3f7d1d6c1f8126/com-express-7-baseboard.kicad_dru"
     }
    },
-   "origin": "antmicro"
+   "origin": "antmicro",
+   "tier": "T0",
+   "tier_note": "benchmark-only routing test case; no proof checked, never a source of copper, blocks or priors"
   },
   {
    "name": "snapdragon-845-baseboard",
@@ -332,7 +368,9 @@
      "url": "https://raw.githubusercontent.com/antmicro/snapdragon-845-baseboard/66b884d6ff47b087dd29949ac58244aa25093583/sa800u-baseboard-hw.kicad_pro"
     }
    },
-   "origin": "antmicro"
+   "origin": "antmicro",
+   "tier": "T0",
+   "tier_note": "benchmark-only routing test case; no proof checked, never a source of copper, blocks or priors"
   },
   {
    "name": "ddr5-testbed",
@@ -349,7 +387,9 @@
      "url": "https://raw.githubusercontent.com/antmicro/ddr5-testbed/5db9286b45b5ad9b44f2d82230609038476f95b9/ddr5-testbed.kicad_pro"
     }
    },
-   "origin": "antmicro"
+   "origin": "antmicro",
+   "tier": "T0",
+   "tier_note": "benchmark-only routing test case; no proof checked, never a source of copper, blocks or priors"
   },
   {
    "name": "cm4-baseboard",
@@ -369,7 +409,9 @@
      "url": "https://raw.githubusercontent.com/antmicro/cm4-baseboard/d248c2921e8e7f4c9b30c96ea5f376d9b2780f1e/cm4-baseboard.kicad_dru"
     }
    },
-   "origin": "antmicro"
+   "origin": "antmicro",
+   "tier": "T0",
+   "tier_note": "benchmark-only routing test case; no proof checked, never a source of copper, blocks or priors"
   }
  ]
 }

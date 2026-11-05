@@ -25,3 +25,21 @@ runs on a copy of the board with
 
 One row per board, appended to `results/<run>.tsv`:
 `board layers nets drc_err unconnected gates seconds verdict top_errors`.
+
+**Tier**: every board in the set is T0 (manifest `tier`): a routing test case only, never a source of copper,
+blocks or layout priors. pg-hw boards become T1 once built and tested.
+
+## Scoring a stage (`pg/stage_delta.py`)
+
+```sh
+python3 pg/stage_delta.py --stage <name> --board <board> --pcb <stage output.kicad_pcb> \
+  [--window X0,Y0,X1,Y1] [--cert <certificate>] [--ref-run <run>]
+```
+
+Judges the stage output like `manufacturable.py` (rules from beside the output, else the reference's), within the
+10 min budget, and compares each DRC error type and the unconnected count with the board's reference run
+(pg boards: `2026-11-05-pg-boards`, others `2026-11-05-reference`), counting only violations with an item in the
+window when one is given. **PASS** = no new type and no count above the reference; a type the reference has at
+KiCad's 199 cap is CAPPED (not comparable). The absolute JLC verdict is the `jlc` column. Row appended to
+`results/stages.tsv`; exit 0 only on PASS. Self-test (reference in = PASS, 20 segments cut = FAIL unconnected+11,
+empty window = PASS): `results/2026-11-05-stage-selftest.tsv`.

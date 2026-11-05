@@ -19,6 +19,7 @@ from common import ROOT, WORK, KICAD_CLI, board_dir, manifest  # noqa: E402
 _J = json.load(open(os.path.join(ROOT, "pg", "jlc-6l.json")))
 JLC, FAB_ERRORS = _J["rules"], _J["severities_error"]
 OVERRIDE = {}  # --pcb name=path: judge this file for the board (its .kicad_pro/.kicad_dru beside it)
+DRC_TIMEOUT = 1800  # stage_delta.py lowers it to its 10 min budget
 COLS = ["board", "layers", "nets", "drc_err", "unconnected", "gates", "seconds", "verdict", "top_errors"]
 
 
@@ -109,7 +110,7 @@ def judge(b, run, routed):
     rep = os.path.join(d, "drc.json")
     t0 = time.time()
     subprocess.run([KICAD_CLI, "pcb", "drc", "--format", "json", "--severity-error", "--refill-zones", "-o", rep, t],
-                   capture_output=True, text=True, timeout=1800)
+                   capture_output=True, text=True, timeout=DRC_TIMEOUT)
     row["seconds"] = round(time.time() - t0)
     row["nets"] = nets_of(t)
     if not os.path.exists(rep):
