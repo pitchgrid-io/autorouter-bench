@@ -1,0 +1,375 @@
+{
+ "note": "PitchGrid benchmark set (pg-hw #913): zap25's 6-8 layer boards, Antmicro 6-8 layer boards pinned to their default-branch HEAD on 2026-11-05, and the pg-hw boards from a local build (PG_HW_BUILD). CK1 has no board of its own: its mainboard is the N6 board. Judged by pg/manufacturable.py.",
+ "boards": [
+  {
+   "name": "pg-n6",
+   "layers": 6,
+   "origin": "pg-hw",
+   "title": "PitchGrid N6 mainboard (STM32N657X0H3Q VFBGA264 + ST DK N6 block); also the CK1 mainboard (config/ck1.yaml case.mainboard.board: n6)",
+   "licence": "PitchGrid internal",
+   "home": "https://github.com/pitchgrid-io/pg-hw/tree/main/boards/n6",
+   "local": {
+    "gen": "boards/n6/gen/run.sh <build>",
+    "pcb": "n6/route/n6.kicad_pcb",
+    "pro": "n6/route/n6.kicad_pro",
+    "dru": "n6/route/n6.kicad_dru"
+   }
+  },
+  {
+   "name": "pg-mossy-quarter-a",
+   "layers": 2,
+   "origin": "pg-hw",
+   "title": "PitchGrid Mossy1 quarter key board, variant A",
+   "licence": "PitchGrid internal",
+   "home": "https://github.com/pitchgrid-io/pg-hw/tree/main/boards/mossy-quarter",
+   "local": {
+    "gen": "boards/mossy-quarter/gen/run.sh config/mossy1.yaml <build>",
+    "pcb": "mossy-quarter/A/mossy-quarter-A.kicad_pcb",
+    "pro": "mossy-quarter/A/mossy-quarter-A.kicad_pro"
+   }
+  },
+  {
+   "name": "cm4-lvds-adapter",
+   "layers": 6,
+   "title": "Antmicro CM4 baseboard LVDS adapter",
+   "licence": "Apache-2.0",
+   "author": "Antmicro",
+   "home": "https://github.com/antmicro/cm4-baseboard-lvds-adapter/tree/4af945ed558e58e4b8aea6fe909fc33d78b63f6f",
+   "connections_zap": 377,
+   "files": {
+    "pcb": {
+     "url": "https://raw.githubusercontent.com/antmicro/cm4-baseboard-lvds-adapter/4af945ed558e58e4b8aea6fe909fc33d78b63f6f/cm4-lvds-adapter.kicad_pcb"
+    },
+    "pro": {
+     "url": "https://raw.githubusercontent.com/antmicro/cm4-baseboard-lvds-adapter/4af945ed558e58e4b8aea6fe909fc33d78b63f6f/cm4-lvds-adapter.kicad_pro"
+    }
+   },
+   "origin": "zap25"
+  },
+  {
+   "name": "ecp5-dc-scm",
+   "layers": 8,
+   "title": "Antmicro ECP5 DC-SCM",
+   "licence": "Apache-2.0",
+   "author": "Antmicro",
+   "home": "https://github.com/antmicro/ecp5-dc-scm/tree/0019313fd2e214f618788e5e61636a4a023ee361",
+   "connections_zap": 1843,
+   "files": {
+    "pcb": {
+     "url": "https://raw.githubusercontent.com/antmicro/ecp5-dc-scm/0019313fd2e214f618788e5e61636a4a023ee361/ecp5-dc-scm.kicad_pcb"
+    },
+    "pro": {
+     "url": "https://raw.githubusercontent.com/antmicro/ecp5-dc-scm/0019313fd2e214f618788e5e61636a4a023ee361/ecp5-dc-scm.kicad_pro"
+    }
+   },
+   "origin": "zap25"
+  },
+  {
+   "name": "emberone",
+   "layers": 6,
+   "title": "EmberOne",
+   "licence": "CERN-OHL-S-2.0",
+   "author": "256 Foundation",
+   "home": "https://github.com/256foundation/emberone00-pcb/tree/b21b32ca49710b99cb75f86406b0df5190c9beb4",
+   "connections_zap": 1125,
+   "files": {
+    "pcb": {
+     "url": "https://raw.githubusercontent.com/256foundation/emberone00-pcb/b21b32ca49710b99cb75f86406b0df5190c9beb4/emberone.kicad_pcb"
+    },
+    "pro": {
+     "url": "https://raw.githubusercontent.com/256foundation/emberone00-pcb/b21b32ca49710b99cb75f86406b0df5190c9beb4/emberone.kicad_pro"
+    }
+   },
+   "origin": "zap25"
+  },
+  {
+   "name": "stm32h7-hdmi-sodimm",
+   "layers": 6,
+   "title": "Antmicro STM32H7 HDMI SO-DIMM board",
+   "licence": "Apache-2.0",
+   "author": "Antmicro",
+   "home": "https://github.com/antmicro/stm32h7-hdmi-board-sodimm/tree/27e3ac9968983f236155c288ded30beb1a2d24a1",
+   "connections_zap": 567,
+   "files": {
+    "pcb": {
+     "url": "https://raw.githubusercontent.com/antmicro/stm32h7-hdmi-board-sodimm/27e3ac9968983f236155c288ded30beb1a2d24a1/stm32h7-hdmi-board-sodimm-module.kicad_pcb"
+    },
+    "pro": {
+     "url": "https://raw.githubusercontent.com/antmicro/stm32h7-hdmi-board-sodimm/27e3ac9968983f236155c288ded30beb1a2d24a1/stm32h7-hdmi-board-sodimm-module.kicad_pro"
+    },
+    "dru": {
+     "url": "https://raw.githubusercontent.com/antmicro/stm32h7-hdmi-board-sodimm/27e3ac9968983f236155c288ded30beb1a2d24a1/stm32h7-hdmi-board-sodimm-module.kicad_dru"
+    }
+   },
+   "origin": "zap25"
+  },
+  {
+   "name": "tiliqua-motherboard",
+   "layers": 6,
+   "title": "Tiliqua (apfaudio)",
+   "licence": "CERN-OHL-S-2.0",
+   "author": "Sebastian Holzapfel",
+   "home": "https://github.com/apfaudio/tiliqua-hardware/tree/4ee5878ae821a6b7096f6aed6795dc1349475cb5",
+   "connections_zap": 531,
+   "files": {
+    "pcb": {
+     "url": "https://raw.githubusercontent.com/apfaudio/tiliqua-hardware/4ee5878ae821a6b7096f6aed6795dc1349475cb5/hardware/tiliqua-motherboard/tiliqua-motherboard.kicad_pcb"
+    },
+    "pro": {
+     "url": "https://raw.githubusercontent.com/apfaudio/tiliqua-hardware/4ee5878ae821a6b7096f6aed6795dc1349475cb5/hardware/tiliqua-motherboard/tiliqua-motherboard.kicad_pro"
+    }
+   },
+   "origin": "zap25"
+  },
+  {
+   "name": "hackrf-pro",
+   "layers": 6,
+   "title": "HackRF Pro",
+   "licence": "CERN-OHL-P-2.0",
+   "author": "Great Scott Gadgets",
+   "home": "https://github.com/greatscottgadgets/hackrf-pro/tree/359b98f2451395408bc25dae64efa9fc518e93d0",
+   "connections_zap": 1677,
+   "files": {
+    "pcb": {
+     "url": "https://raw.githubusercontent.com/greatscottgadgets/hackrf-pro/359b98f2451395408bc25dae64efa9fc518e93d0/praline.kicad_pcb"
+    },
+    "pro": {
+     "url": "https://raw.githubusercontent.com/greatscottgadgets/hackrf-pro/359b98f2451395408bc25dae64efa9fc518e93d0/praline.kicad_pro"
+    }
+   },
+   "origin": "zap25"
+  },
+  {
+   "name": "kintex-pcie",
+   "layers": 8,
+   "title": "Kintex PCIe board",
+   "licence": "Apache-2.0",
+   "author": "Piotr Binkowski",
+   "home": "https://github.com/piotr-binkowski/kintex-pcie-board/tree/056792c009a8920d4ef11e76ba3284ee58376078",
+   "connections_zap": 706,
+   "files": {
+    "pcb": {
+     "url": "https://raw.githubusercontent.com/piotr-binkowski/kintex-pcie-board/056792c009a8920d4ef11e76ba3284ee58376078/kintex-pcie.kicad_pcb"
+    },
+    "pro": {
+     "url": "https://raw.githubusercontent.com/piotr-binkowski/kintex-pcie-board/056792c009a8920d4ef11e76ba3284ee58376078/kintex-pcie.kicad_pro"
+    }
+   },
+   "origin": "zap25"
+  },
+  {
+   "name": "xerxes",
+   "layers": 6,
+   "title": "Xerxes",
+   "licence": "Apache-2.0",
+   "author": "Rapid Analysis",
+   "home": "https://github.com/rapidanalysis/xerxes/tree/43abf5730d092358bc6d10e9faa7233818b5412e",
+   "connections_zap": 314,
+   "files": {
+    "pcb": {
+     "url": "https://raw.githubusercontent.com/rapidanalysis/xerxes/43abf5730d092358bc6d10e9faa7233818b5412e/Xerxes/Xerxes.kicad_pcb"
+    },
+    "pro": {
+     "url": "https://raw.githubusercontent.com/rapidanalysis/xerxes/43abf5730d092358bc6d10e9faa7233818b5412e/Xerxes/Xerxes.kicad_pro"
+    }
+   },
+   "origin": "zap25"
+  },
+  {
+   "name": "jetson-nano-baseboard",
+   "layers": 8,
+   "title": "Antmicro's open hardware baseboard for the NVIDIA Jetson Nano, TX2 NX and Xavier NX",
+   "licence": "Apache-2.0",
+   "author": "Antmicro",
+   "home": "https://github.com/antmicro/jetson-nano-baseboard/tree/d8d0b2d71ab4cc4bcdb204a09f78be40d4c8cda3",
+   "files": {
+    "pcb": {
+     "url": "https://raw.githubusercontent.com/antmicro/jetson-nano-baseboard/d8d0b2d71ab4cc4bcdb204a09f78be40d4c8cda3/jetson-nano-baseboard.kicad_pcb"
+    },
+    "pro": {
+     "url": "https://raw.githubusercontent.com/antmicro/jetson-nano-baseboard/d8d0b2d71ab4cc4bcdb204a09f78be40d4c8cda3/jetson-nano-baseboard.kicad_pro"
+    }
+   },
+   "origin": "antmicro"
+  },
+  {
+   "name": "jetson-orin-baseboard",
+   "layers": 8,
+   "title": "Baseboard targetting the NVIDIA Jetson Orin Nano and  Jetson Orin NX",
+   "licence": "Apache-2.0",
+   "author": "Antmicro",
+   "home": "https://github.com/antmicro/jetson-orin-baseboard/tree/34f0e7f5fbca441191e20ed55d93cf8614e12bed",
+   "files": {
+    "pcb": {
+     "url": "https://raw.githubusercontent.com/antmicro/jetson-orin-baseboard/34f0e7f5fbca441191e20ed55d93cf8614e12bed/jetson-orin-baseboard.kicad_pcb"
+    },
+    "pro": {
+     "url": "https://raw.githubusercontent.com/antmicro/jetson-orin-baseboard/34f0e7f5fbca441191e20ed55d93cf8614e12bed/jetson-orin-baseboard.kicad_pro"
+    },
+    "dru": {
+     "url": "https://raw.githubusercontent.com/antmicro/jetson-orin-baseboard/34f0e7f5fbca441191e20ed55d93cf8614e12bed/jetson-orin-baseboard.kicad_dru"
+    }
+   },
+   "origin": "antmicro"
+  },
+  {
+   "name": "kria-k26-devboard",
+   "layers": 8,
+   "title": "Open source AMD Xilinx Kria UltraScale+ SoM baseboard",
+   "licence": "Apache-2.0",
+   "author": "Antmicro",
+   "home": "https://github.com/antmicro/kria-k26-devboard/tree/9ead4dfc5b29fa9308206ccdfe013dd8f6d93b67",
+   "files": {
+    "pcb": {
+     "url": "https://raw.githubusercontent.com/antmicro/kria-k26-devboard/9ead4dfc5b29fa9308206ccdfe013dd8f6d93b67/kria-k26-devboard.kicad_pcb"
+    },
+    "pro": {
+     "url": "https://raw.githubusercontent.com/antmicro/kria-k26-devboard/9ead4dfc5b29fa9308206ccdfe013dd8f6d93b67/kria-k26-devboard.kicad_pro"
+    }
+   },
+   "origin": "antmicro"
+  },
+  {
+   "name": "lpddr4-test-board",
+   "layers": 8,
+   "title": "Experimental development board interfacing Xilinx Kintex-7 FPGA with LPDDR4 SDRAM ",
+   "licence": "Apache-2.0",
+   "author": "Antmicro",
+   "home": "https://github.com/antmicro/lpddr4-test-board/tree/5c8b5d3c27d6f3e802dc2d9022a1b1e87b725e5b",
+   "files": {
+    "pcb": {
+     "url": "https://raw.githubusercontent.com/antmicro/lpddr4-test-board/5c8b5d3c27d6f3e802dc2d9022a1b1e87b725e5b/lpddr4-test-board.kicad_pcb"
+    },
+    "pro": {
+     "url": "https://raw.githubusercontent.com/antmicro/lpddr4-test-board/5c8b5d3c27d6f3e802dc2d9022a1b1e87b725e5b/lpddr4-test-board.kicad_pro"
+    }
+   },
+   "origin": "antmicro"
+  },
+  {
+   "name": "lpddr4-testbed",
+   "layers": 6,
+   "title": "Experimental breakout board for a signle 200-ball WFBGA LPDDR4 chip in SO-DIMM DDR4 form factor.",
+   "licence": "Apache-2.0",
+   "author": "Antmicro",
+   "home": "https://github.com/antmicro/lpddr4-testbed/tree/93e67cfc3f267443d9b637073688457e8f5c1f91",
+   "files": {
+    "pcb": {
+     "url": "https://raw.githubusercontent.com/antmicro/lpddr4-testbed/93e67cfc3f267443d9b637073688457e8f5c1f91/lpddr4-testbed.kicad_pcb"
+    },
+    "pro": {
+     "url": "https://raw.githubusercontent.com/antmicro/lpddr4-testbed/93e67cfc3f267443d9b637073688457e8f5c1f91/lpddr4-testbed.kicad_pro"
+    }
+   },
+   "origin": "antmicro"
+  },
+  {
+   "name": "lpddr5-testbed",
+   "layers": 6,
+   "title": "Experimental adapter intefacing a single LPDDR5 IC with FPGA-driven memory testers",
+   "licence": "Apache-2.0",
+   "author": "Antmicro",
+   "home": "https://github.com/antmicro/lpddr5-testbed/tree/cea331b8c5e3f1c47fce71aa02077f7295c96107",
+   "files": {
+    "pcb": {
+     "url": "https://raw.githubusercontent.com/antmicro/lpddr5-testbed/cea331b8c5e3f1c47fce71aa02077f7295c96107/lpddr5-testbed.kicad_pcb"
+    },
+    "pro": {
+     "url": "https://raw.githubusercontent.com/antmicro/lpddr5-testbed/cea331b8c5e3f1c47fce71aa02077f7295c96107/lpddr5-testbed.kicad_pro"
+    }
+   },
+   "origin": "antmicro"
+  },
+  {
+   "name": "artix-dc-scm",
+   "layers": 8,
+   "title": "Experimental Xilinx Artix-7 driven Data Center Security Communication Module",
+   "licence": "Apache-2.0",
+   "author": "Antmicro",
+   "home": "https://github.com/antmicro/artix-dc-scm/tree/b9856f78179fce0739a4955dd4ed5f912619efe6",
+   "files": {
+    "pcb": {
+     "url": "https://raw.githubusercontent.com/antmicro/artix-dc-scm/b9856f78179fce0739a4955dd4ed5f912619efe6/artix-dc-scm.kicad_pcb"
+    },
+    "pro": {
+     "url": "https://raw.githubusercontent.com/antmicro/artix-dc-scm/b9856f78179fce0739a4955dd4ed5f912619efe6/artix-dc-scm.kicad_pro"
+    }
+   },
+   "origin": "antmicro"
+  },
+  {
+   "name": "com-express-7-baseboard",
+   "layers": 8,
+   "title": "com-express-7-baseboard",
+   "licence": "Apache-2.0",
+   "author": "Antmicro",
+   "home": "https://github.com/antmicro/com-express-7-baseboard/tree/4811fd8491dbe0cbbb738e127d3f7d1d6c1f8126",
+   "files": {
+    "pcb": {
+     "url": "https://raw.githubusercontent.com/antmicro/com-express-7-baseboard/4811fd8491dbe0cbbb738e127d3f7d1d6c1f8126/com-express-7-baseboard.kicad_pcb"
+    },
+    "pro": {
+     "url": "https://raw.githubusercontent.com/antmicro/com-express-7-baseboard/4811fd8491dbe0cbbb738e127d3f7d1d6c1f8126/com-express-7-baseboard.kicad_pro"
+    },
+    "dru": {
+     "url": "https://raw.githubusercontent.com/antmicro/com-express-7-baseboard/4811fd8491dbe0cbbb738e127d3f7d1d6c1f8126/com-express-7-baseboard.kicad_dru"
+    }
+   },
+   "origin": "antmicro"
+  },
+  {
+   "name": "snapdragon-845-baseboard",
+   "layers": 6,
+   "title": "https://antmicro.com/blog/2022/04/open-source-snapdragon-845-baseboard/",
+   "licence": "Apache-2.0",
+   "author": "Antmicro",
+   "home": "https://github.com/antmicro/snapdragon-845-baseboard/tree/66b884d6ff47b087dd29949ac58244aa25093583",
+   "files": {
+    "pcb": {
+     "url": "https://raw.githubusercontent.com/antmicro/snapdragon-845-baseboard/66b884d6ff47b087dd29949ac58244aa25093583/sa800u-baseboard-hw.kicad_pcb"
+    },
+    "pro": {
+     "url": "https://raw.githubusercontent.com/antmicro/snapdragon-845-baseboard/66b884d6ff47b087dd29949ac58244aa25093583/sa800u-baseboard-hw.kicad_pro"
+    }
+   },
+   "origin": "antmicro"
+  },
+  {
+   "name": "ddr5-testbed",
+   "layers": 6,
+   "title": "Experimental test bed for interfacing with Micron MT60B2G8HB DDR5 ICs",
+   "licence": "Apache-2.0",
+   "author": "Antmicro",
+   "home": "https://github.com/antmicro/ddr5-testbed/tree/5db9286b45b5ad9b44f2d82230609038476f95b9",
+   "files": {
+    "pcb": {
+     "url": "https://raw.githubusercontent.com/antmicro/ddr5-testbed/5db9286b45b5ad9b44f2d82230609038476f95b9/ddr5-testbed.kicad_pcb"
+    },
+    "pro": {
+     "url": "https://raw.githubusercontent.com/antmicro/ddr5-testbed/5db9286b45b5ad9b44f2d82230609038476f95b9/ddr5-testbed.kicad_pro"
+    }
+   },
+   "origin": "antmicro"
+  },
+  {
+   "name": "cm4-baseboard",
+   "layers": 6,
+   "title": "Experimental baseboard supporting System on Modules with Raspberry Pi CM4/CM5 pinout",
+   "licence": "Apache-2.0",
+   "author": "Antmicro",
+   "home": "https://github.com/antmicro/cm4-baseboard/tree/d248c2921e8e7f4c9b30c96ea5f376d9b2780f1e",
+   "files": {
+    "pcb": {
+     "url": "https://raw.githubusercontent.com/antmicro/cm4-baseboard/d248c2921e8e7f4c9b30c96ea5f376d9b2780f1e/cm4-baseboard.kicad_pcb"
+    },
+    "pro": {
+     "url": "https://raw.githubusercontent.com/antmicro/cm4-baseboard/d248c2921e8e7f4c9b30c96ea5f376d9b2780f1e/cm4-baseboard.kicad_pro"
+    },
+    "dru": {
+     "url": "https://raw.githubusercontent.com/antmicro/cm4-baseboard/d248c2921e8e7f4c9b30c96ea5f376d9b2780f1e/cm4-baseboard.kicad_dru"
+    }
+   },
+   "origin": "antmicro"
+  }
+ ]
+}

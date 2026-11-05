@@ -86,6 +86,8 @@ def main():
         name = b["name"]
         if picked and name not in picked:
             continue
+        if "local" in b:  # a pg-hw board: built by its generator, read from PG_HW_BUILD by pg/manufacturable.py
+            continue
         print(f"=== {name}", flush=True)
         blobs = {}
         archive = None

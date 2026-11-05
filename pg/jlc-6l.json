@@ -1,0 +1,30 @@
+{
+  "source": "JLCPCB 6-layer capabilities, stackup JLC06161H-3313, as recorded in pitchgrid-io/pg-hw boards/n6/rules/layout.yaml (drc:) and evidence/838/JLC_RULES.md; jlcpcb.com/capabilities/pcb-capabilities read 2026-10-26/30",
+  "note": "Floors only: each value raises the board's own design-settings minimum when the board's is lower; a board's stricter rules stay. hole_to_hole is JLC's via hole-to-hole 0.2 + 0.05 margin (pg-hw #687).",
+  "rules": {
+    "min_clearance": 0.09,
+    "min_track_width": 0.09,
+    "min_via_diameter": 0.25,
+    "min_through_hole_diameter": 0.15,
+    "min_via_annular_width": 0.05,
+    "min_hole_to_hole": 0.25,
+    "min_hole_clearance": 0.2,
+    "min_copper_edge_clearance": 0.3
+  },
+  "severities_error": [
+    "clearance",
+    "copper_edge_clearance",
+    "hole_clearance",
+    "hole_to_hole",
+    "track_width",
+    "via_diameter",
+    "annular_width",
+    "drill_out_of_range",
+    "shorting_items",
+    "tracks_crossing",
+    "items_not_allowed",
+    "copper_sliver",
+    "solder_mask_bridge"
+  ],
+  "note2": "severities_error: fab-relevant checks forced to error severity, so a project that set them to warning or ignore cannot hide them (pol-s1's hole_to_hole was a warning, #904)."
+}
